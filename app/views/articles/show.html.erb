@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between bg-light p-2 align-items-center">
+  <%= link_to "Wikinimous", articles_path, class: "fs-5 fw-normal m-0 ps-2 text-decoration-none text-dark" %>
+  <%= link_to "New Article", new_article_path, class: "btn btn-primary me-2 text-decoration-none" %>
+</div>
+<div class="container mt-4" style="width: 50vw">
+  <div class="d-flex pb-3 border-bottom borer-light-subtle align-items-center">
+    <h2 class="fs-1 text-dark fw-normal"><%= @article.title %></h2>
+    <i class="fa-solid fa-pencil fs-3 text-primary ps-3"></i>
+    <i class="fa-solid fa-trash-can fs-3 text-primary ps-3"></i>
+  </div>
+</div>

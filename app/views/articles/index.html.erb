@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-between bg-light p-2 align-items-center">
+  <%= link_to "Wikinimous", articles_path, class: "fs-5 fw-normal m-0 ps-2 text-decoration-none text-dark" %>
+  <%= link_to "New Article", new_article_path, class: "btn btn-primary me-2 text-decoration-none" %>
+</div>
+<div class="container mt-4" style="width: 50vw">
+  <% @articles.each do |article| %>
+    <%= link_to article.title, article_path(article), class: "fs-2 text-primary fw-normal mb-1 link-offset-2 link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %>
+    <p class="fs-5 fw-light text-truncate mb-4"><%= article.content %></p>
+  <% end %>
+</div>
